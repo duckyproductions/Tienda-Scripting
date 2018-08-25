@@ -8,8 +8,8 @@ public class NonConsumable : Item {
 
 	public bool wasBought = false;
 
-	public NonConsumable(int price) : base(price)
-	{
+	public NonConsumable(string name, int index, int price) : base(name, index, price)
+    {
 
 	}
 }

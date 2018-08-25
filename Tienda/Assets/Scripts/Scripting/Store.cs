@@ -37,18 +37,36 @@ public class Store : MonoBehaviour {
 
 	public void Buy()
 	{
-			Inventory.money -= storeItems[itemIndex].price;
+		Inventory.money -= storeItems[itemIndex].price;
 			
 
-			if (storeItems[itemIndex] is NonConsumable)
+		if (storeItems[itemIndex] is NonConsumable)
+		{
+			if ((storeItems[itemIndex] as NonConsumable).wasBought == false)
 			{
-				if ((storeItems[itemIndex] as NonConsumable).wasBought == false)
-				{
-					(storeItems[itemIndex] as NonConsumable).wasBought = true;
-					Inventory.items.Add(storeItems[itemIndex]);
-					btn.interactable = false;
-				}
+				(storeItems[itemIndex] as NonConsumable).wasBought = true;
+				Inventory.items.Add(storeItems[itemIndex]);
+				btn.interactable = false;
 			}
+		}
+        if (storeItems[itemIndex]is Consumable)
+        {
+            if (Inventory.items.Contains(storeItems[itemIndex])==true)
+            {
+                for (int i =0 ; i < Inventory.items.Count; i++)
+                {
+                    if (Inventory.items[i].index == storeItems[itemIndex].index)
+                    {
+                        (Inventory.items[i] as Consumable).cant++;
+                    }
+                }
+            }
+            else
+            {
+                Inventory.items.Add(storeItems[itemIndex]);
+            }
+
+        }
 	}
 
 	public void Change()

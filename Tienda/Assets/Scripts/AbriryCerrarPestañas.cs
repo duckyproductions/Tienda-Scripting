@@ -12,4 +12,9 @@ public class AbriryCerrarPestañas : MonoBehaviour {
 		cerrar.SetActive(false);
 		abrir.SetActive(true);
 	}
+    public void CrearObjetos()
+    {
+        GameObject.Find("Invent").GetComponent<Inventory>().createItems();
+
+    }
 }

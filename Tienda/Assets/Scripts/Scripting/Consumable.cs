@@ -5,9 +5,9 @@ using UnityEngine;
 public class Consumable : Item {
 
 
-	int cant;
+	public int cant=1;
 
-	public Consumable(int price) : base(price)
+	public Consumable(string name, int index, int price) : base(name,index,price)
 	{
 	}
 
