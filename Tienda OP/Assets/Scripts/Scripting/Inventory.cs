@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour {
 	static public int money = 1000;
 	static public List<Item> items = new List<Item>();
 
-	public int cantidad = 0;
+	int cantidad = 0;
 	public Text cantText;    
 
     public int itemIndex;
