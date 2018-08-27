@@ -1,5 +1,10 @@
 # Tienda-Scripting
 
+2018-2
+
+Sebastían Arboleda Alvarez 
+Jose Manuel Castro Duque
+Esteban Olarte Cuervo
 
 Sonido de click de FreeSound:
 https://freesound.org/people/kwahmah_02/sounds/256116/
